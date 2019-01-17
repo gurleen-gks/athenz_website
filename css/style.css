@@ -1,0 +1,209 @@
+body {
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+
+.grey-background {
+    background: #F7F7F7;
+}
+
+.header {
+    height: 60px;
+    background-color: #2A78CC;
+
+}
+
+.logo {
+    margin: auto;
+    color: #F2F2F2;
+    padding-left: 50px;
+    padding-top: 0.25rem;
+}
+
+.nav {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    font-family: Helvetica;
+    font-size: 16px;
+    text-align: left;
+}
+
+.nav-item a {
+    color: #F2F2F2;
+}
+
+.slider {
+    background-image: url('../assets/banner.png');
+    height: 390px;
+    background-size: cover;
+}
+
+.heading {
+    margin-top: 10%;
+}
+
+.btn-explore {
+    background: #FFFFFF;
+    border-radius: 2px;
+    color: #358FF2;
+    text-align: center;
+    width: 180px;
+}
+
+.btn-join-slack {
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    color: #fff;
+    text-align: center;
+    width: 180px;
+}
+
+.btn-documentation {
+    width: 150px;
+}
+
+.never-trust {
+    background-image: url('../assets/never-trust.png');
+    background-size: 100% 100%;
+}
+
+.fine-grained {
+    background-image: url('../assets/fine-grained.png');
+    background-size: 100% 100%;
+}
+
+.single-source {
+    background-image: url('../assets/single-source.png');
+    background-size: 100% 100%;
+}
+
+.certificate {
+    background-image: url('../assets/certificate.png');
+    background-size: 100% 100%;
+}
+
+.centralized {
+    background-image: url('../assets/centralized.png');
+    background-size: 100% 100%;
+    min-height: 306px;
+}
+
+.decentralized {
+    background-image: url('../assets/decentralized.png');
+    background-size: 100% 100%;
+    min-height: 306px;
+}
+
+.features {
+    color: #000;
+    margin-top: 20%;
+    margin-left: 25px;
+}
+
+.details {
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #565656;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+
+.architecture .details {
+    height: 80px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.features-row > .col-md {
+    min-height: 306px;
+}
+
+.line {
+    margin: 0;
+    height: 4px;
+    background: #F5A623;
+    border: none;
+    width: 50px;
+    display: inline-block;
+}
+
+.slider .heading {
+    padding-left: 35px;
+}
+
+.features .heading {
+    font-family: HelveticaNeue-Bold;
+    font-size: 16px;
+    color: #303030;
+    margin: 0;
+}
+
+/*.features-row img {*/
+/*height: 100%;*/
+/*width: 100%;*/
+/*}*/
+
+.rbac {
+    font-size: 16px;
+    color: #000;
+    margin-left: 25px;
+    margin-top: 60px;
+}
+
+.rbac .heading, .getting-started .heading {
+    font-family: Helvetica-Bold;
+    font-size: 24px;
+    color: #000000;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.rbac .details {
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+.architecture {
+    margin-left: 25px;
+    color: #555555;
+    margin-bottom: 55px;
+    margin-top: -15px;
+}
+
+.architecture .heading {
+    font-family: Helvetica-Bold;
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 0;
+}
+
+.getting-started {
+    background: #F7F7F7;
+    font-size: 16px;
+    color: #000;
+    margin: -15px;
+    padding: 80px 40px;
+}
+
+.footer {
+    padding: 15px;
+    color: #000;
+}
+
+.footer-lists {
+    padding-top: 60px;
+    padding-left: 15px;
+}
+
+.footer h6 {
+    font-family: HelveticaNeue-Bold;
+    font-size: 14px;
+    color: #7F7F7F;
+}
