@@ -13,14 +13,13 @@ body {
 .header {
     height: 60px;
     background-color: #2A78CC;
-
 }
 
 .logo {
     margin: auto;
     color: #F2F2F2;
     padding-left: 50px;
-    padding-top: 0.25rem;
+    padding-top: 0.65rem;
 }
 
 .nav {
@@ -126,6 +125,7 @@ body {
 
 .features-row > .col-md {
     min-height: 306px;
+
 }
 
 .line {
