@@ -50,6 +50,7 @@ body {
 
 .heading h1 {
     font-family: HelveticaNeue-Bold;
+    font-size: 5rem;
 }
 .btn-explore {
     background: #FFFFFF;
@@ -138,7 +139,8 @@ body {
 }
 
 .slider .heading {
-    padding-left: 35px;
+    margin-left:20%;
+    margin-top: 10%;
 }
 
 .features .heading {
@@ -193,6 +195,7 @@ body {
     color: #000;
     margin: -15px;
     padding: 80px 40px;
+    margin-bottom: 0px;
 }
 
 .footer {
