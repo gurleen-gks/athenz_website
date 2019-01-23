@@ -110,6 +110,8 @@ body {
     margin-left: 25px;
 }
 
+.word-wrap{word-wrap: break-word;}
+
 .details {
     font-family: Helvetica;
     font-size: 14px;
@@ -139,7 +141,7 @@ body {
 }
 
 .slider .heading {
-    margin-left:20%;
+    margin-left:15%;
     margin-top: 10%;
 }
 
