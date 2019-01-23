@@ -6,6 +6,10 @@ body {
     line-height: 26px;
 }
 
+main {
+    padding-top: 60px;
+}
+
 .grey-background {
     background: #F7F7F7;
 }
@@ -13,6 +17,8 @@ body {
 .header {
     height: 60px;
     background-color: #2A78CC;
+    border-bottom: 1px solid whitesmoke;
+    overflow: hidden;
 }
 
 .logo {
@@ -20,6 +26,10 @@ body {
     color: #F2F2F2;
     padding-left: 50px;
     padding-top: 0.65rem;
+}
+
+.heading {
+    margin-top: 10%;
 }
 
 .nav {
@@ -40,18 +50,15 @@ body {
 
 .slider {
     background-image: url('../assets/banner.png');
-    height: 390px;
+    min-height: 390px;
     background-size: cover;
-}
-
-.heading {
-    margin-top: 10%;
 }
 
 .heading h1 {
     font-family: HelveticaNeue-Bold;
     font-size: 5rem;
 }
+
 .btn-explore {
     background: #FFFFFF;
     border-radius: 2px;
@@ -110,7 +117,9 @@ body {
     margin-left: 25px;
 }
 
-.word-wrap{word-wrap: break-word;}
+.word-wrap {
+    word-wrap: break-word;
+}
 
 .details {
     font-family: Helvetica;
@@ -138,11 +147,6 @@ body {
     border: none;
     width: 50px;
     display: inline-block;
-}
-
-.slider .heading {
-    margin-left:20%;
-    margin-top: 10%;
 }
 
 .features .heading {
