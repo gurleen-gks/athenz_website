@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Athenz IO Docs</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container-fluid">
-    <nav class="row navbar header fixed-top header">
-        <div class="col-md col-xs-12 pt-sm-1 pt-md-0">
-        </div>
-        <div class="col-md-auto col-xs-12 text-right">
-            <ul class="nav float-right ">
+<div class="container-fluid fixed-top ">
+    <nav class="navbar  navbar-dark navbar-expand-md justify-content-between">
+        <a class="navbar-brand logo invisible" href="#">
+            <img src="assets/logo.png" alt="Athenz Logo" style="width: 30px; height: 30px;">
+            Athenz
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="https://yahoo.github.io/athenz/site/">Documentation</a>
+                    <a class="nav-link" href="#">Explore</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://yahoo.github.io/athenz/site/">Documentation</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://athenz-rbac.tumblr.com/">Blog</a>
@@ -41,7 +51,7 @@
             <div class="row">
                 <div class="col-md-auto col-lg-8 col-xl-6">
                     <div class="heading mt-0">
-                        <h1><img src="assets/Athenz_Logo_Mark_White@2x.png" class="img-fluid" alt="Athenz Logo"
+                        <h1><img src="assets/logo.png" class="img-fluid" alt="Athenz Logo"
                                  style="width: 120px; height: 120px;">Athenz</h1>
 
                         <div>
@@ -50,7 +60,7 @@
                         </div>
                         <div>
                             <a href="#" class="btn btn-primary btn-explore">Explore Athenz</a>
-                            <a href="#" class="btn btn-join-slack">Join in on Slack</a>
+                            <a href="https://ouroath.slack.com/messages/C6KCBLV5Y/" class="btn btn-join-slack">Join in on Slack</a>
                         </div>
                     </div>
                 </div>
@@ -60,20 +70,20 @@
     </div>
     <div class="container">
         <div class="row features-row">
-            <div class="col-md">
+            <div class="col-lg col-sm-6">
                 <div class="features">
                     <h5 class="heading">Never Trust & Always Verify</h5>
                     <hr class="line" size="10">
                     <p class="details">
-                        Enable zero trust core principles like traffic encryption, AuthN, AuthZ, Dynamic Trust & Least
+                        Enable zero trust core principles like traffic encryption, AuthN, AuthZ, Dynamic Trust & least
                         privilege access
                     </p>
                 </div>
             </div>
-            <div class="col-md never-trust">
-
+            <div class="col-lg col-sm-6 never-trust">
+                <!--<img class="" src="assets/never-trust_2.png"/>-->
             </div>
-            <div class="col-md">
+            <div class="col-lg col-sm-6 ">
                 <div class="features">
                     <h5 class="heading">Fine-grained Authorization</h5>
                     <hr class="line" size="10">
@@ -83,32 +93,35 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md fine-grained">
+            <div class="col-lg col-sm-6  fine-grained">
+                <!--<img src="assets/fine-grained_2.png" alt="">-->
             </div>
         </div>
-        <br class="d-block d-md-none">
+        <br class="d-block d-md-none"/>
         <div class="row features-row">
-            <div class="col-md certificate">
+            <div class="col-lg col-sm-6 certificate">
+                <!--<img class="" src="assets/certificate_2.png"/>-->
             </div>
-            <div class="col-md">
+            <div class="col-lg col-sm-6">
                 <div class="features">
-                    <h5 class="heading">Never Trust & Always Verify</h5>
+                    <h5 class="heading">X.509 Certificate Authentication</h5>
                     <hr class="line" size="10">
                     <p class="details">
-                        Enable zero trust core principles like traffic encryption, AuthN, AuthZ, Dynamic Trust & Least
-                        privilege access
+                        Service Identity in the form of short-lived X.509 certificate to all workloads deployed
+                        in private or public clouds. Stronger security by mTLS authentication
                     </p>
                 </div>
             </div>
-            <div class="col-md single-source">
+            <div class="col-lg col-sm-6   single-source">
+                <!--<img class="" src="assets/single-source_2.png"/>-->
             </div>
-            <div class="col-md">
+            <div class="col-lg col-sm-6  ">
                 <div class="features">
-                    <h5 class="heading">Fine-grained Authorization</h5>
+                    <h5 class="heading">Single Source of Truth</h5>
                     <hr class="line" size="10">
                     <p class="details">
-                        Authorize all authenticated clients using fine-grained role-based (RBAC)
-                        access control.
+                        Consolidated service serving various downstream security implementation, including
+                        support for non-user entities.
                     </p>
                 </div>
             </div>
@@ -135,8 +148,11 @@
                     <div class="architecture">
                         <h5 class="heading">Centralized</h5>
                         <p class="details">
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Learn More
+                            A traditional centralized access control model requires any Athenz enabled
+                            application to contact Athenz Management Service directly to determine if a
+                            specific authenticated principal has been authorized to
+                            carry out the given action on the requested resource.
+                            <a href="https://yahoo.github.io/athenz/site/auth_flow/#centralized-access-control-control-plane">Learn More</a>
                         </p>
                         <p>
                     </div>
@@ -146,8 +162,11 @@
                     <div class="architecture">
                         <h5 class="heading">Decentralized</h5>
                         <p class="details">
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Learn More
+                            For use cases where latency is a concern, Athenz provides a decentralized
+                            model where the check to see if a given principal has been
+                            authorized to carry out the given action on the requested service is done
+                            on host itself using the Athenz local policy engine library.
+                            <a href="https://yahoo.github.io/athenz/site/auth_flow/#decentralized-access-control-data-plane">Learn More</a>
                         </p>
                     </div>
                     <div class="row decentralized"></div>
@@ -157,13 +176,16 @@
                 <div class="col-md">
                     <div class="getting-started">
                         <h4>Getting Started</h4>
-                        <p>Explore the Athenz documentation and easily create a test development environment with ZMS
-                            (Athenz
-                            Management Service), ZTS (Athenz Token Service), and UI services.
-                            For reference implementation, visit the Java Client/Servlet or Go Client/Server example
-                            documentation.</p>
+                        <p>Explore the Athenz documentation and easily create a test development environment with
+                            <a href="https://yahoo.github.io/athenz/site/setup_zms_prod/">ZMS (Athenz Management Service)</a>,
+                            <a href="https://yahoo.github.io/athenz/site/setup_zts_prod/">ZTS (Athenz Token Service)</a>, and
+                            <a href="https://yahoo.github.io/athenz/site/setup_ui_prod/">UI</a>
+                            services. For reference implementation, visit the
+                            <a href="https://yahoo.github.io/athenz/site/example_java_centralized_access/">Java Client/Servlet</a> or
+                            <a href="https://yahoo.github.io/athenz/site/example_go_centralized_access/">Go Client/Server</a>
+                            example documentation.</p>
                         <p>
-                            <a href="#" class="btn btn-outline-primary btn-documentation">Documentation</a>
+                            <a href="https://yahoo.github.io/athenz/site/" class="btn btn-outline-primary btn-documentation">Documentation</a>
                         </p>
                     </div>
                 </div>
@@ -202,5 +224,30 @@
         </div>
     </div>
 </main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script>
+    $(function () {
+        const LOGO_SHOW_SCROLL_TOP = 165;
+        $(window).scroll(function () {
+            // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > LOGO_SHOW_SCROLL_TOP) {
+                $('.navbar-brand').removeClass('invisible')
+            } else {
+                $('.navbar-brand').addClass('invisible')
+            }
+        });
+        if ($(window).scrollTop() > LOGO_SHOW_SCROLL_TOP) {
+            $('.navbar-brand').removeClass('invisible')
+        }
+    });
+</script>
 </body>
 </html>
