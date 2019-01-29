@@ -75,7 +75,7 @@
 <div class="container-fluid grey-background">
     <div class="container">
         <div class="row grey-background">
-            <div class="col-md-5 col-xs-12">
+            <div class="col-md-5 col-12">
                 <div class="service-auth">
                     <h4 class="heading">Service Authentication</h4>
                     <p class="details">
@@ -93,7 +93,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-7 col-xs-12">
+            <div class="col-md-7 col-12">
                 <div class="service-auth-img"></div>
             </div>
         </div>
@@ -155,7 +155,7 @@
 <div class="container-fluid grey-background">
     <div class="container">
         <div class="row grey-background">
-            <div class="col-md-5 col-xs-12">
+            <div class="col-md-5 col-12">
                 <div class="aws-temp mt-5 mb-5">
                     <h4 class="heading">AWS Temporary Credentials Support</h4>
                     <p class="details">
@@ -165,31 +165,67 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-7 col-xs-12">
+            <div class="col-md-7 col-12">
                 <div class="aws-temp-img"></div>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="rbac">
-        <div class="row">
-            <div class="col-md">
-            </div>
-        </div>
-    </div>
+<div class="container data-model-container">
+    <h4 class="box-title heading">Data Model</h4>
     <div class="row">
-        <div class="col-md">
-            <div class="architecture">
+        <div class="col-12 col-lg-5">
+            <div class="d-flex">
+                <div>
+                    <img src="assets/domain.png" alt="">
+                    <hr>
+                </div>
+                <div class="desc">
+                    <h4 class="heading">Domain</h4>
+                    <p class="details">Domains are namespaces, strictly partitioned, providing a context for authoritative statements to
+                        be
+                        made about entities it contains.</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div>
+                    <img src="assets/policies.png" alt="">
+                    <hr>
+                </div>
+                <div class="desc">
+                    <h4 class="heading">Policies</h4>
+                    <p class="details">To implement access control, we have policies in our domain that govern the use of our resources.
+                        A
+                        policy is set of assertions (rules) about granting or denying an operation/action on a
+                        resource.</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div>
+                    <img src="assets/roles.png" alt="">
+                    <hr>
+                </div>
+                <div class="desc">
+                    <h4 class="heading">Roles</h4>
+                    <p class="details">A role can be thought of as a group and, anyone in the group can assume the role that takes a
+                        particular action. Every policy assertion describes what can be done by a role.</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div><img src="assets/principle.png" alt=""></div>
+                <div class="desc">
+                    <h4 class="heading">Principle</h4>
+                    <p class="details">The actors in Athenz that can assume a role are called principals. These principals are
+                        authenticated and can be users or services. Athenz currently provides service identity and
+                        authentication support.</p>
+                </div>
             </div>
         </div>
-        <div class="col-md">
-            <div class="architecture">
-            </div>
+        <div class="col-12 col-lg-7 data-model">
+            <img src="assets/data-model.png"/>
         </div>
     </div>
 </div>
-
 <div class="container-fluid grey-background">
     <div class="container">
         <div class="row">
@@ -220,7 +256,7 @@
 </div>
 <div class="container">
     <div class="row footer">
-        <div class="col-md col-xs-12 col-sm-12">
+        <div class="col-md col-12 col-sm-12">
             <div class="row footer-lists">
                 <div class="col-md col-xs col-sm">
                     <h6>COMMUNITY</h6>
