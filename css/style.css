@@ -34,6 +34,10 @@ main {
     justify-content: center;
 }
 
+.nav-link.active{
+    border-bottom: white solid 3px;
+}
+
 .nav-item {
     font-family: Helvetica;
     font-size: 16px;
@@ -58,6 +62,11 @@ main {
 .heading h1 {
     font-family: HelveticaNeue-Bold;
     font-size: 5rem;
+}
+
+.heading h2{
+    font-family: HelveticaNeue-Bold;
+    font-size: 2.5rem;
 }
 
 .btn-explore {
@@ -108,10 +117,29 @@ main {
     min-height: 306px;
 }
 
+.thumbnail{
+    padding: 70px;
+    border: lightgrey solid 1px;
+    margin-left:25px;
+    margin-bottom:60px;
+}
+
+.centralized-explore {
+    background-image: url('../assets/centralized_exp.png');
+    background-size: 100% 100%;
+    min-height: 250px;
+}
+
 .decentralized {
     background-image: url('../assets/decentralized.png');
     background-size: 100% 100%;
     min-height: 306px;
+}
+
+.decentralized-explore {
+    background-image: url('../assets/decentralized_exp.png');
+    background-size: 100% 100%;
+    min-height: 250px;
 }
 
 .features {
@@ -174,14 +202,48 @@ main {
     height: 260px;
 }
 
-.rbac {
+.rbac{
+     font-size: 16px;
+     color: #000;
+     margin-left: 25px;
+     margin-top: 60px;
+ }
+
+
+.service-auth,.aws-temp{
+    margin-left: 25px;
     font-size: 16px;
     color: #000;
-    margin-left: 25px;
-    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom : 60px;
 }
 
-.rbac .heading, .getting-started .heading {
+.aws-temp{
+    padding-top: 120px;
+}
+
+
+.service-auth-img {
+    background-image: url('../assets/authentication_exp.png');
+    background-size: 100% 100%;
+    min-height: 309px;
+    margin-left: 5px;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    margin-right: -20px;
+}
+
+.aws-temp-img{
+    background-image: url('../assets/aws.png');
+    background-size: 100% 100%;
+    min-height: 450px;
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-right: -20px;
+}
+
+.rbac .heading, .getting-started .heading, .about .heading, .service-auth .heading, .aws-temp .heading {
     font-family: Helvetica-Bold;
     font-size: 24px;
     color: #000000;
@@ -189,7 +251,7 @@ main {
     margin: 0;
 }
 
-.rbac .details {
+.rbac .details, .service-auth .details, .aws-temp .details {
     font-size: 16px;
     padding-top: 15px;
 }
@@ -217,10 +279,19 @@ main {
     margin-bottom: 0px;
 }
 
-.getting-started .details{
+.getting-started .details, .about .details{
     font-size: 16px;
     padding-top: 15px;
     padding-bottom: 10px;
+}
+
+.about {
+    font-size: 16px;
+    color: #565656;
+    padding-top: 60px ;
+    padding-bottom: 60px;
+    margin-left: 25px;
+    margin-bottom: -20px;
 }
 
 .footer {
@@ -237,4 +308,10 @@ main {
     font-family: HelveticaNeue-Bold;
     font-size: 14px;
     color: #7F7F7F;
+}
+
+.header {
+    min-height: 80px;
+    background-color: #2A78CC;
+    background-size: cover;
 }

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Athenz IO Docs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-fluid fixed-top ">
+    <nav class="navbar  navbar-dark navbar-expand-md justify-content-between">
+        <a class="navbar-brand logo visible" href="#">
+            <img src="assets/logo.png" alt="Athenz Logo" style="width: 30px; height: 30px;">
+            Athenz
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Explore</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://yahoo.github.io/athenz/site/">Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://athenz-rbac.tumblr.com/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="https://join.slack.com/t/athenz/shared_invite/enQtNDk2MzczMjAxNDExLWVjNDMyZGQ4NmM0ZDYwNGUwY2QxNGEyMGJkMDZhOTljOTY3OTNjNmQyMmM0Y2Y4MDRhMzU0YzE4MzlkNmRmOWQ">Slack</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/yahoo/athenz">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://www.athenz.io/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container-fluid header">
+    <div class="container pt-5 pb-1">
+        <div class="row">
+            <div class="col-md-auto col-lg-8 col-xl-6">
+                <div class="heading mt-5 mb-4">
+                    <h2>Explore Athenz</h2>
+
+                </div>
+            </div>
+            <div class="col-md-auto col-lg-4 col-xl-6"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="about">
+        <div class="row">
+            <div class="col-md">
+                <h4 class="heading">About</h4>
+                <p class="details">Athenz is a set of services and libraries supporting role-based authorization (RBAC)
+                    for provisioning
+                    and configuration (centralized authorization) use cases as well as serving/runtime (decentralized
+                    authorization) use cases. Athenz authorization system utilizes two types of tokens: Principal Tokens
+                    (N-Tokens) and
+                    RoleTokens (Z-Tokens).
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid grey-background">
+    <div class="container">
+        <div class="row grey-background">
+            <div class="col-md-5 col-xs-12">
+                <div class="service-auth">
+                    <h4 class="heading">Service Authentication</h4>
+                    <p class="details">
+                        Athenz provides secure identity in the form of short-lived X.509 certificate for every
+                        workload or service deployed in private (e.g. OpenStack, Kubernetes, Screwdriver) or public
+                        cloud (e.g. AWS EC2, ECS, Fargate, Lambda). Using these X.509 certificates, clients and services
+                        establish secure connections and through mutual TLS authentication verify each other's identity.
+                        The service identity certificates are only valid for 30 days and the service identity agents
+                        (SIA)
+                        part of those frameworks automatically refresh them daily. The term service within Athenz is
+                        more
+                        generic than a traditional service. A service identity could represent a command, job, daemon,
+                        workflow,
+                        as well as both an application client and application service.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-7 col-xs-12">
+                <div class="service-auth-img"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="rbac">
+        <div class="row">
+            <div class="col-md">
+                <h4 class="heading">Role-Based Authorization (RBAC)</h4>
+                <p class="details">
+                    Once the client is authenticated with its X.509 certificate, the service can then check if
+                    the given client is authorized to carry out the requested action. Athenz provides fine-grained
+                    role-based access control (RBAC) support for a centralized management system with support for
+                    control-plane access control decisions and a decentralized enforcement mechanism suitable for
+                    data-plane access control decisions. It also provides a delegated management model that supports
+                    multi-tenant and self-service concepts.
+                    <a href="https://yahoo.github.io/athenz/site/auth_flow/">Learn More</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="architecture">
+                <h5 class="heading">Centralized Access Control</h5>
+                <p class="details">
+                    A traditional centralized access control model requires any Athenz enabled
+                    application to contact Athenz Management Service directly to determine if a
+                    specific authenticated principal has been authorized to
+                    carry out the given action on the requested resource.
+                    <a href="https://yahoo.github.io/athenz/site/auth_flow/#centralized-access-control-control-plane">Learn
+                        More</a>
+                </p>
+            </div>
+            <div class="thumbnail">
+                <div class="row centralized-explore"></div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="architecture">
+                <h5 class="heading">Decentralized Access Control</h5>
+                <p class="details">
+                    For use cases where latency is a concern, Athenz provides a decentralized
+                    model where the check to see if a given principal has been
+                    authorized to carry out the given action on the requested service is done
+                    on the host itself using the Athenz local policy engine library.
+                    <a href="https://yahoo.github.io/athenz/site/auth_flow/#decentralized-access-control-data-plane">Learn
+                        More</a>
+                </p>
+            </div>
+            <div class="thumbnail">
+                <div class="row decentralized-explore"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid grey-background">
+    <div class="container">
+        <div class="row grey-background">
+            <div class="col-md-5 col-xs-12">
+                <div class="aws-temp mt-5 mb-5">
+                    <h4 class="heading">AWS Temporary Credentials Support</h4>
+                    <p class="details">
+                        When working with AWS, Athenz provides support to access AWS services from on-prem
+                        services by using AWS temporary credentials rather than static credentials. Athenz
+                        ZTS server can be used to request AWS temporary credentials for configured AWS IAM roles.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-7 col-xs-12">
+                <div class="aws-temp-img"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="rbac">
+        <div class="row">
+            <div class="col-md">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="architecture">
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="architecture">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid grey-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="getting-started">
+                    <h4 class="heading">Getting Started</h4>
+                    <p class="details">Explore the Athenz documentation and easily create a test development
+                        environment with
+                        <a href="https://yahoo.github.io/athenz/site/setup_zms_prod/">ZMS (Athenz Management
+                            Service)</a>,
+                        <a href="https://yahoo.github.io/athenz/site/setup_zts_prod/">ZTS (Athenz Token Service)</a>,
+                        and
+                        <a href="https://yahoo.github.io/athenz/site/setup_ui_prod/">UI</a>
+                        services. For reference implementation, visit the
+                        <a href="https://yahoo.github.io/athenz/site/example_java_centralized_access/">Java
+                            Client/Servlet</a> or
+                        <a href="https://yahoo.github.io/athenz/site/example_go_centralized_access/">Go
+                            Client/Server</a>
+                        example documentation.</p>
+                    <p>
+                        <a href="https://yahoo.github.io/athenz/site/"
+                           class="btn btn-outline-primary btn-documentation">Documentation</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row footer">
+        <div class="col-md col-xs-12 col-sm-12">
+            <div class="row footer-lists">
+                <div class="col-md col-xs col-sm">
+                    <h6>COMMUNITY</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="https://athenz-rbac.tumblr.com">Blog</a></li>
+                        <li>
+                            <a href="https://join.slack.com/t/athenz/shared_invite/enQtNDk2MzczMjAxNDExLWVjNDMyZGQ4NmM0ZDYwNGUwY2QxNGEyMGJkMDZhOTljOTY3OTNjNmQyMmM0Y2Y4MDRhMzU0YzE4MzlkNmRmOWQ">Slack</a>
+                        </li>
+                        <li><a href="http://www.athenz.io/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md col-xs col-sm">
+                    <h6>CONTRIBUTE</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/yahoo/athenz">GitHub</a></li>
+                        <li><a href="https://github.com/yahoo/athenz/issues">Suggest</a></li>
+                    </ul>
+                </div>
+                <div class="col-md col-xs col-sm">
+                    <h6>RESOURCES</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="">Getting Started</a></li>
+                        <li><a href="https://yahoo.github.io/athenz/site/">Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md"></div>
+    </div>
+</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+</html>
