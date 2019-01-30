@@ -61,12 +61,12 @@
         <div class="row">
             <div class="col-md">
                 <h4 class="heading">About</h4>
-                <p class="details">Athenz is a set of services and libraries supporting role-based authorization (RBAC)
-                    for provisioning
-                    and configuration (centralized authorization) use cases as well as serving/runtime (decentralized
-                    authorization) use cases. Athenz authorization system utilizes two types of tokens: Principal Tokens
-                    (N-Tokens) and
-                    RoleTokens (Z-Tokens).
+                <p class="details">Athenz is an open source platform for X.509 certificate based service authentication
+                    and fine grained access control in dynamic infrastructures. It provides a generalized model for authorized
+                    service providers to launch other services identified by their X.509 certificates in an authorized way through
+                    a callback-based verification model. Athenz also supports role-based authorization (RBAC) for provisioning and
+                    configuration (centralized authorization) use cases as well as serving/runtime (decentralized authorization)
+                    use cases to handle on-box enforcement.
                 </p>
             </div>
         </div>
@@ -121,10 +121,12 @@
             <div class="architecture">
                 <h5 class="heading">Centralized Access Control</h5>
                 <p class="details">
-                    A traditional centralized access control model requires any Athenz enabled
-                    application to contact Athenz Management Service directly to determine if a
-                    specific authenticated principal has been authorized to
-                    carry out the given action on the requested resource.
+                    A traditional centralized mechanism works as expected for
+                    services that are not dealing with the decentralized authorization:
+                    the server with resources can simply ask the ZMS directly about access,
+                    passing the service identity and resource/action information to get a simple boolean answer.
+                    It is suitable for provisioning and configuration use cases where latency for authorization
+                    checks is not important.
                     <a href="https://yahoo.github.io/athenz/site/auth_flow/#centralized-access-control-control-plane">Learn
                         More</a>
                 </p>
@@ -137,10 +139,12 @@
             <div class="architecture">
                 <h5 class="heading">Decentralized Access Control</h5>
                 <p class="details">
-                    For use cases where latency is a concern, Athenz provides a decentralized
-                    model where the check to see if a given principal has been
-                    authorized to carry out the given action on the requested service is done
-                    on the host itself using the Athenz local policy engine library.
+                    A more interesting scenario introduces the local policy engine (ZPE),
+                    and a few supporting changes. Rather than directly asking for an access
+                    check with a principal identity, the identity is instead used to get a ZToken,
+                    and that is presented to the target service until it expires. This mechanism
+                    allows a service to make a completely local access check against ZPE, given
+                    a ZToken and locally cached policies.
                     <a href="https://yahoo.github.io/athenz/site/auth_flow/#decentralized-access-control-data-plane">Learn
                         More</a>
                 </p>
@@ -207,7 +211,7 @@
                 </div>
                 <div class="desc">
                     <h4 class="heading">Roles</h4>
-                    <p class="details">A role can be thought of as a group and, anyone in the group can assume the role that takes a
+                    <p class="details">A role can be thought of as a group and anyone in the group can assume the role that takes a
                         particular action. Every policy assertion describes what can be done by a role.</p>
                 </div>
             </div>
