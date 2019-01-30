@@ -204,7 +204,7 @@ main {
     margin-top: 60px;
 }
 
-.service-auth, .aws-temp {
+.service-auth, .aws-temp, .contact {
     margin-left: 25px;
     font-size: 16px;
     color: #000;
@@ -242,7 +242,7 @@ main {
     margin-left: -30px;
 }
 
-.rbac .heading, .getting-started .heading, .about .heading, .service-auth .heading, .aws-temp .heading, .data-model-container .heading {
+.rbac .heading, .getting-started .heading, .about .heading, .service-auth .heading, .aws-temp .heading, .data-model-container .heading, .contact .heading{
     font-family: Helvetica-Bold;
     font-size: 24px;
     color: #000000;
@@ -250,7 +250,7 @@ main {
     margin: 0;
 }
 
-.rbac .details, .service-auth .details, .aws-temp .details{
+.rbac .details, .service-auth .details, .aws-temp .details, .contact .details{
     font-size: 16px;
     padding-top: 15px;
 }
@@ -275,6 +275,15 @@ main {
     color: #565656;
     /*margin: -15px;*/
     padding: 80px 25px;
+    margin-bottom: 0px;
+}
+
+.contact {
+    background: #F7F7F7;
+    font-size: 16px;
+    color: #565656;
+    /*margin: -15px;*/
+    padding-top: 40px;
     margin-bottom: 0px;
 }
 
