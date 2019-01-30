@@ -118,7 +118,7 @@ main {
 }
 
 .thumbnail {
-    padding: 70px;
+    padding: 20px;
     border: lightgrey solid 1px;
     margin-left: 25px;
     margin-bottom: 60px;
@@ -127,7 +127,7 @@ main {
 .centralized-explore {
     background-image: url('../assets/centralized_exp.png');
     background-size: 100% 100%;
-    min-height: 250px;
+    min-height: 306px;
 }
 
 .decentralized {
@@ -139,7 +139,7 @@ main {
 .decentralized-explore {
     background-image: url('../assets/decentralized_exp.png');
     background-size: 100% 100%;
-    min-height: 250px;
+    min-height: 306px;
 }
 
 .features {
